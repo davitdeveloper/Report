@@ -80,7 +80,6 @@
             if (!this.$store.state.auth.user) this.$router.push({
                 name: 'login'
             });
-            // this.page = this.$router.app._route.query.page ? this.$router.app._route.query.page : 1;
         }
 
     }

@@ -12,7 +12,7 @@
                         </template>
                     </v-data-table>
                     <div class="text-center pt-2">
-                        <v-pagination v-model="page" :length="pageCount"></v-pagination>
+                        <v-pagination v-model="page" length="3"></v-pagination>
                     </div>
                     <div>
                         <v-btn color="primary" dark class="mb-2" @click="$router.push({ path:'/report/types'})">
@@ -53,12 +53,7 @@
             ],
 
         }),
-        computed: {
-            pageCount() {
-                return Math.ceil(this.items.length / this.itemsPerPage);
-            },
-        },
-        watch: {
+    watch: {
             page: function () {
                 this.$router.replace({
                     path: '',
